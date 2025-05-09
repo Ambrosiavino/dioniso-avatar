@@ -1,4 +1,3 @@
-
 import dynamic from 'next/dynamic';
 
 const Avatar3D = dynamic(() => import('../components/Avatar3D'), { ssr: false });
