@@ -20,3 +20,4 @@ export default function Avatar3D() {
     </div>
   );
 }
+useGLTF.preload('/dioniso.glb');
