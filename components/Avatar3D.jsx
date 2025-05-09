@@ -1,4 +1,5 @@
-import React from 'react';
+// components/Avatar3D.jsx
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
@@ -13,12 +14,15 @@ export default function Avatar3D() {
       <Canvas>
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 5, 5]} />
-        <OrbitControls enableZoom={false} />
-        <DionisoModel />
+        <Suspense fallback={null}>
+          <DionisoModel />
+        </Suspense>
+        <OrbitControls enableZoom={true} />
       </Canvas>
     </div>
   );
 }
 
 useGLTF.preload('/dioniso.glb');
+
 
