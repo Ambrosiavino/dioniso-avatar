@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
@@ -20,4 +19,6 @@ export default function Avatar3D() {
     </div>
   );
 }
+
 useGLTF.preload('/dioniso.glb');
+
